@@ -9,6 +9,7 @@ import Textform from './components/Textform';
 import Contact from './pages/Contact';
 import TextTools from './pages/TextTools';
 import WordCounter from './pages/WordCounter';
+import TextEditor from "./pages/TextEditor";
 
 import './App.css';
 
@@ -38,7 +39,7 @@ function App() {
           <Route path="/form" element={<Textform />} />
 
           <Route path="/word-counter" element={<WordCounter />} />
-
+          <Route path="/text-tools" element={<TextEditor />} />
         </Routes>
 
       </div>
