@@ -75,6 +75,7 @@ export default function Navbar(props) {
 
               <ul className="dropdown-menu">
 
+                {/* Text Tools */}
                 <li>
                   <Link
                     className="dropdown-item"
@@ -84,6 +85,17 @@ export default function Navbar(props) {
                   </Link>
                 </li>
 
+                {/* Text Editor */}
+                <li>
+                  <Link
+                    className="dropdown-item"
+                    to="/text-editor"
+                  >
+                    Text Editor
+                  </Link>
+                </li>
+
+                {/* Word Counter */}
                 <li>
                   <Link
                     className="dropdown-item"
@@ -97,6 +109,7 @@ export default function Navbar(props) {
                   <hr className="dropdown-divider" />
                 </li>
 
+                {/* More Tools */}
                 <li>
                   <Link
                     className="dropdown-item"
