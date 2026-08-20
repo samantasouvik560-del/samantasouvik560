@@ -4,7 +4,8 @@ export default function Home() {
   return (
     <div className="home-page">
 
-      {/* Hero Section */}
+      {/* ================= HERO ================= */}
+
       <section className="hero-section">
 
         <div className="hero-content">
@@ -23,13 +24,14 @@ export default function Home() {
             activities from one simple dashboard.
           </p>
 
+          {/* ONLY CREATE FORM BUTTON */}
+
           <div className="hero-buttons">
 
-            <Link to="/text-tools" className="hero-btn primary">
-              Explore Tools →
-            </Link>
-
-            <Link to="/form" className="hero-btn secondary">
+            <Link
+              to="/form"
+              className="hero-btn secondary"
+            >
               Create Form
             </Link>
 
@@ -40,27 +42,39 @@ export default function Home() {
       </section>
 
 
-      {/* Quick Actions */}
+      {/* ================= QUICK ACTIONS ================= */}
+
       <section className="dashboard-section">
 
         <div className="section-heading">
-          <h2>⚡ Quick Actions</h2>
+
+          <h2>
+            ⚡ Quick Actions
+          </h2>
 
           <p>
             Quickly access the things you use most.
           </p>
+
         </div>
 
 
         <div className="quick-grid">
 
-          <Link to="/text-tools" className="dashboard-card">
+          {/* TEXT EDITOR */}
+
+          <Link
+            to="/text-editor"
+            className="dashboard-card"
+          >
 
             <div className="card-icon blue">
               📝
             </div>
 
-            <h3>Text Editor</h3>
+            <h3>
+              Text Editor
+            </h3>
 
             <p>
               Write, edit and format your text easily.
@@ -73,13 +87,20 @@ export default function Home() {
           </Link>
 
 
-          <Link to="/word-counter" className="dashboard-card">
+          {/* WORD COUNTER */}
+
+          <Link
+            to="/word-counter"
+            className="dashboard-card"
+          >
 
             <div className="card-icon purple">
               🔢
             </div>
 
-            <h3>Word Counter</h3>
+            <h3>
+              Word Counter
+            </h3>
 
             <p>
               Count words, characters and sentences.
@@ -92,13 +113,20 @@ export default function Home() {
           </Link>
 
 
-          <Link to="/form" className="dashboard-card">
+          {/* FORM */}
+
+          <Link
+            to="/form"
+            className="dashboard-card"
+          >
 
             <div className="card-icon pink">
               📋
             </div>
 
-            <h3>Create Form</h3>
+            <h3>
+              Create Form
+            </h3>
 
             <p>
               Fill out and submit your personal form.
@@ -110,43 +138,31 @@ export default function Home() {
 
           </Link>
 
-
-          <div className="dashboard-card">
-
-            <div className="card-icon orange">
-              🗒️
-            </div>
-
-            <h3>Quick Notes</h3>
-
-            <p>
-              Quickly save your important thoughts.
-            </p>
-
-            <span>
-              Coming Soon →
-            </span>
-
-          </div>
-
         </div>
 
       </section>
 
 
-      {/* Dashboard */}
+      {/* ================= TODAY'S ACTIVITY ================= */}
+
       <section className="dashboard-section">
 
         <div className="section-heading">
-          <h2>📊 Today's Activity</h2>
+
+          <h2>
+            📊 Today's Activity
+          </h2>
 
           <p>
-            A quick look at your productivity.
+            A quick look at your productivity and learning.
           </p>
+
         </div>
 
 
         <div className="activity-grid">
+
+          {/* NOTES */}
 
           <div className="activity-card">
 
@@ -155,12 +171,21 @@ export default function Home() {
             </div>
 
             <div>
-              <h3>3</h3>
-              <p>Notes Created</p>
+
+              <h3>
+                3
+              </h3>
+
+              <p>
+                Notes Created
+              </p>
+
             </div>
 
           </div>
 
+
+          {/* WORDS */}
 
           <div className="activity-card">
 
@@ -169,12 +194,21 @@ export default function Home() {
             </div>
 
             <div>
-              <h3>427</h3>
-              <p>Words Written</p>
+
+              <h3>
+                427
+              </h3>
+
+              <p>
+                Words Written
+              </p>
+
             </div>
 
           </div>
 
+
+          {/* TOOLS */}
 
           <div className="activity-card">
 
@@ -183,12 +217,21 @@ export default function Home() {
             </div>
 
             <div>
-              <h3>5</h3>
-              <p>Tools Used</p>
+
+              <h3>
+                5
+              </h3>
+
+              <p>
+                Tools Used
+              </p>
+
             </div>
 
           </div>
 
+
+          {/* STUDY */}
 
           <div className="activity-card">
 
@@ -197,95 +240,216 @@ export default function Home() {
             </div>
 
             <div>
-              <h3>2h 15m</h3>
-              <p>Study Time</p>
+
+              <h3>
+                2h 15m
+              </h3>
+
+              <p>
+                Study Time
+              </p>
+
             </div>
 
           </div>
 
         </div>
 
+
+        {/* ================= CONTINUE LEARNING ================= */}
+
+        <Link
+          to="/continue-learning"
+          className="continue-learning-home"
+        >
+
+          <div className="continue-learning-left">
+
+            <div className="continue-learning-icon">
+              🚀
+            </div>
+
+            <div>
+
+              <span className="learning-small-label">
+                KEEP MOVING FORWARD
+              </span>
+
+              <h2>
+                Continue Learning
+              </h2>
+
+              <p>
+                Pick up where you left off and keep building
+                your skills.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div className="continue-learning-right">
+
+            <div className="learning-progress-info">
+
+              <span>
+                Today's Progress
+              </span>
+
+              <strong>
+                65%
+              </strong>
+
+            </div>
+
+
+            <div className="progress-bar learning-main-progress">
+
+              <div
+                className="progress-fill"
+                style={{ width: "65%" }}
+              ></div>
+
+            </div>
+
+
+            <span className="learning-open">
+              Continue Learning →
+            </span>
+
+          </div>
+
+        </Link>
+
       </section>
 
 
-      {/* Learning Progress */}
+      {/* ================= LEARNING OVERVIEW ================= */}
+
       <section className="dashboard-section">
 
         <div className="section-heading">
-          <h2>📚 Continue Learning</h2>
+
+          <h2>
+            📚 Learning Progress
+          </h2>
 
           <p>
-            Keep track of your learning progress.
+            Your current learning journey.
           </p>
+
         </div>
 
 
         <div className="learning-card">
 
+          {/* REACT */}
+
           <div className="learning-item">
 
             <div className="learning-info">
 
               <div>
-                <h3>React</h3>
-                <p>React Router & Components</p>
+
+                <h3>
+                  React
+                </h3>
+
+                <p>
+                  React Router & Components
+                </p>
+
               </div>
 
-              <strong>80%</strong>
+              <strong>
+                80%
+              </strong>
 
             </div>
 
+
             <div className="progress-bar">
+
               <div
                 className="progress-fill"
                 style={{ width: "80%" }}
               ></div>
+
             </div>
 
           </div>
 
+
+          {/* JAVASCRIPT */}
 
           <div className="learning-item">
 
             <div className="learning-info">
 
               <div>
-                <h3>JavaScript</h3>
-                <p>Async JS & API Calls</p>
+
+                <h3>
+                  JavaScript
+                </h3>
+
+                <p>
+                  Async JS & API Calls
+                </p>
+
               </div>
 
-              <strong>100%</strong>
+              <strong>
+                100%
+              </strong>
 
             </div>
 
+
             <div className="progress-bar">
+
               <div
                 className="progress-fill"
                 style={{ width: "100%" }}
               ></div>
+
             </div>
 
           </div>
 
+
+          {/* C++ */}
 
           <div className="learning-item">
 
             <div className="learning-info">
 
               <div>
-                <h3>C++</h3>
-                <p>OOP & Classes</p>
+
+                <h3>
+                  C++
+                </h3>
+
+                <p>
+                  OOP & Classes
+                </p>
+
               </div>
 
-              <strong>45%</strong>
+              <strong>
+                45%
+              </strong>
 
             </div>
 
+
             <div className="progress-bar">
+
               <div
                 className="progress-fill"
                 style={{ width: "45%" }}
               ></div>
+
             </div>
 
           </div>
@@ -295,7 +459,8 @@ export default function Home() {
       </section>
 
 
-      {/* Bottom CTA */}
+      {/* ================= BOTTOM CTA ================= */}
+
       <section className="home-cta">
 
         <div>
@@ -305,16 +470,19 @@ export default function Home() {
           </h2>
 
           <p>
-            Explore your tools and keep building your skills.
+            Explore your tools, continue learning and keep
+            building your future.
           </p>
 
         </div>
 
-        <Link to="/text-tools">
-          Start Exploring →
+
+        <Link to="/continue-learning">
+          Continue Learning →
         </Link>
 
       </section>
+
 
     </div>
   );

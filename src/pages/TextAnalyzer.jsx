@@ -22,18 +22,7 @@ export default function TextAnalyzer() {
   const readingTime = Math.max(1, Math.ceil(words / 200));
 
   return (
-    <div className="page">
-       <div
-  className="page"
-  style={{
-    padding: "50px",
-    minHeight: "100vh",
-    background: "white",
-    color: "black"
-  }}
->
-    
-</div>
+    <div className="page" style={{ padding: "50px 7%", minHeight: "calc(100vh - 70px)" }}>
       <h1>Text Analyzer</h1>
 
       <p>

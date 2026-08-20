@@ -19,14 +19,6 @@ export default function TextTools() {
       active: true,
     },
     {
-        icon: "📊",
-        title: "Text Analyzer",
-        description: "Analyze words, characters, sentences and reading time.",
-        category: "Analysis",
-        link: "/text-analyzer",
-        active: true,
-  },
-    {
       icon: "🔍",
       title: "Find & Replace",
       description: "Find specific text and replace it instantly.",

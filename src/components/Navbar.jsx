@@ -1,173 +1,107 @@
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
-export default function Navbar(props) {
+export default function Navbar({ darkMode, setDarkMode }) {
   return (
-    <nav className="navbar navbar-expand-lg custom-navbar">
-      <div className="container-fluid">
+    <nav className="custom-navbar">
 
-        {/* Logo */}
-        <Link className="navbar-brand souvik-brand" to="/">
-          Souvik
+      {/* LOGO */}
+      <Link to="/" className="souvik-logo">
+        Souvik
+      </Link>
+
+
+      {/* NAVIGATION */}
+      <div className="nav-links">
+
+        <Link to="/" className="nav-item">
+          Home
         </Link>
 
-        {/* Mobile menu button */}
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
+        <Link to="/about" className="nav-item">
+          About
+        </Link>
 
-        {/* Navbar content */}
-        <div
-          className="collapse navbar-collapse"
-          id="navbarSupportedContent"
-        >
+        <Link to="/form" className="nav-item">
+          Form
+        </Link>
 
-          {/* Menu */}
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+        <Link to="/contact" className="nav-item">
+          Contact
+        </Link>
 
-            {/* Home */}
-            <li className="nav-item">
-              <Link className="nav-link active" to="/">
-                Home
-              </Link>
-            </li>
 
-            {/* About */}
-            <li className="nav-item">
-              <Link className="nav-link" to="/about">
-                About
-              </Link>
-            </li>
+        {/* TOOLS */}
+        <div className="tools-wrapper">
 
-            {/* Form */}
-            <li className="nav-item">
-              <Link className="nav-link" to="/form">
-                Form
-              </Link>
-            </li>
+          <button
+            className="tools-button"
+            type="button"
+          >
+            Tools <span>⌄</span>
+          </button>
+          <Link to="/ai-text-improver">
+  ✨ <span>AI Text Improver</span>
+</Link>
 
-            {/* Contact */}
-            <li className="nav-item">
-              <Link className="nav-link" to="/contact">
-                Contact
-              </Link>
-            </li>
+          <div className="tools-menu">
 
-            {/* Tools */}
-            <li className="nav-item dropdown">
+            <Link to="/text-tools">
+              📝 <span>Text Tools</span>
+            </Link>
 
-              <a
-                className="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Tools
-              </a>
+            <Link to="/text-editor">
+              ✏️ <span>Text Editor</span>
+            </Link>
 
-              <ul className="dropdown-menu">
+            <Link to="/word-counter">
+              🔢 <span>Word Counter</span>
+            </Link>
 
-                {/* Text Tools */}
-                <li>
-                  <Link
-                    className="dropdown-item"
-                    to="/text-tools"
-                  >
-                    Text Tools
-                  </Link>
-                </li>
+            <Link to="/text-analyzer">
+              🔍 <span>Text Analyzer</span>
+            </Link>
 
-                {/* Text Editor */}
-                <li>
-                  <Link
-                    className="dropdown-item"
-                    to="/text-editor"
-                  >
-                    Text Editor
-                  </Link>
-                </li>
+            <Link to="/quick-notes">
+              📌 <span>Quick Notes</span>
+            </Link>
 
-                {/* Word Counter */}
-                <li>
-                  <Link
-                    className="dropdown-item"
-                    to="/word-counter"
-                  >
-                    Word Counter
-                  </Link>
-                </li>
-
-                <li>
-                  <hr className="dropdown-divider" />
-                </li>
-
-                {/* More Tools */}
-                <li>
-                  <Link
-                    className="dropdown-item"
-                    to="/more-tools"
-                  >
-                    More Tools
-                  </Link>
-                </li>
-
-              </ul>
-            </li>
-
-          </ul>
-
-          {/* Search + Dark Mode */}
-          <form className="d-flex navbar-tools">
-
-            <input
-              className="form-control search-box"
-              type="search"
-              placeholder="Search..."
-              aria-label="Search"
-            />
-
-            <button
-              className="btn search-btn"
-              type="submit"
-            >
-              Search
-            </button>
-
-            {/* Dark Mode Toggle */}
-            <div className="dark-mode-toggle">
-
-              <label className="switch">
-
-                <input
-                  type="checkbox"
-                  checked={props.darkMode}
-                  onChange={() =>
-                    props.setDarkMode(!props.darkMode)
-                  }
-                />
-
-                <span className="slider"></span>
-
-              </label>
-
-              <span className="dark-mode-text">
-                Enable Dark Mode
-              </span>
-
-            </div>
-
-          </form>
+          </div>
 
         </div>
+
       </div>
+
+
+      {/* RIGHT SIDE */}
+      <div className="navbar-right">
+
+        <div className="search-wrapper">
+
+          <span>⌕</span>
+
+          <input
+            type="text"
+            placeholder="Search"
+          />
+
+        </div>
+
+
+        {/* DARK MODE */}
+        <button
+          className={`theme-button ${
+            darkMode ? "dark" : ""
+          }`}
+          onClick={() =>
+            setDarkMode(!darkMode)
+          }
+          type="button"
+        >
+          {darkMode ? "☀️" : "🌙"}
+        </button>
+
+      </div>
+
     </nav>
   );
 }
